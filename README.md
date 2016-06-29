@@ -1,4 +1,6 @@
 # hi-vim
+
+[![Join the chat at https://gitter.im/hi-vim/hi-vim](https://badges.gitter.im/hi-vim/hi-vim.svg)](https://gitter.im/hi-vim/hi-vim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 一个用来介绍 VIM 的网页
 
 ## 网站结构
