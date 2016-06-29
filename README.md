@@ -5,5 +5,5 @@
 网站使用Golang 的 Echo 框架开发
 
 ## 感谢🙏
-egaga 的 [openvim](https://github.com/egaga/openvim) 项目  
+[openvim](https://github.com/egaga/openvim) 项目  
 [vim-awesome](https://github.com/vim-awesome/vim-awesome) 项目
