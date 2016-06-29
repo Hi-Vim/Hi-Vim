@@ -1,4 +1,4 @@
-# hi-vim [![Gitter](https://badges.gitter.im/hi-vim/hi-vim.svg)](https://gitter.im/hi-vim/hi-vim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+# hi-vim [![Build Status](https://travis-ci.org/hi-vim/hi-vim.svg?branch=master)](https://travis-ci.org/hi-vim/hi-vim) [![Gitter](https://badges.gitter.im/hi-vim/hi-vim.svg)](https://gitter.im/hi-vim/hi-vim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 一个用来介绍 VIM 的网页
 
 ## 网站结构
