@@ -6,5 +6,5 @@ import (
 )
 
 func Index(c echo.Context) error {
-	return c.Render(http.StatusOK, "index", "aa")
+	return c.Render(http.StatusOK, "common/header.html", nil)
 }
