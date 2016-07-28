@@ -12,6 +12,7 @@ func Init() *echo.Echo {
 	r := pongor.GetRenderer()
 
 	e.SetRenderer(r)
+	e.Static("/static", "static/build/")
 
 	e.GET("/", controller.Index)
 	return e

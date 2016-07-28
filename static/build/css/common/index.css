@@ -1,0 +1,20 @@
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main-container .nav {
+  height: 4em;
+  line-height: 4em;
+  font-size: 1.3em;
+  background: #fff;
+  color: #49BFF6;
+  display: flex;
+}
+.main-container .nav .logo {
+  flex: 2;
+  text-align: center;
+}
+.main-container .nav .nav-item {
+  flex: 1;
+  text-align: center;
+}

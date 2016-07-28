@@ -5,3 +5,4 @@ syntax: glob
 production/
 minify.sh
 hi-vim
+node_modules/
