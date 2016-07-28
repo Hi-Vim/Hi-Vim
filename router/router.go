@@ -13,6 +13,7 @@ func Init() *echo.Echo {
 
 	e.SetRenderer(r)
 	e.Static("/static", "static/build/")
+	e.Static("/img", "static/img/")
 
 	e.GET("/", controller.Index)
 	return e

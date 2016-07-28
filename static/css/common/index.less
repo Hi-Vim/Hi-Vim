@@ -1,4 +1,10 @@
 @default_color: #49BFF6;
+.display{
+    display: none;
+}
+.cursor{
+    cursor: pointer;
+}
 .main-container{
     max-width: 1200px;
     margin: 0 auto;
@@ -12,10 +18,34 @@
         .logo{
             flex: 2;
             text-align: center;
+            .cursor;
         }
         .nav-item{
             flex: 1;
             text-align: center;
+            .cursor;
+        }
+    }
+    .main-content{
+        .main-pic{
+            img{
+                width: 100%;
+                height: 40em;
+            }
+        }
+        .main-intro{
+            margin-top: 2em;
+            .subintro{
+                 text-align: center;
+            }
+            .intro-content{
+                .line-one,.line-two{
+                    display: flex;
+                }
+                .item{
+                    flex: 1;
+                }
+            }
         }
     }
 }
