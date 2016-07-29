@@ -39,7 +39,21 @@
 .main-container .main-content .main-intro .intro-content .line-one,
 .main-container .main-content .main-intro .intro-content .line-two {
   display: flex;
+  margin-top: 2em;
 }
 .main-container .main-content .main-intro .intro-content .item {
   flex: 1;
+  width: 100px;
+  padding: 1em 8em;
+}
+.main-container .main-content .main-intro .intro-content .item .icon {
+  font-size: 4em;
+  color: #49BFF6;
+}
+.main-container .main-content .main-intro .intro-content .item .title {
+  margin: 0.7em 0;
+  font-size: 1.4em;
+}
+.main-container .main-content .main-intro .intro-content .item .content {
+  color: #999;
 }
