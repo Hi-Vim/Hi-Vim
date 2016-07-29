@@ -57,3 +57,17 @@
 .main-container .main-content .main-intro .intro-content .item .content {
   color: #999;
 }
+.main-container .main-content .main-intro .join-us {
+  background-color: #d5d8dc;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+.main-container .main-content .main-intro .join-us h1 {
+  text-align: center;
+}
+.main-container .main-content .main-intro .join-us .content {
+  text-align: center;
+}
+.main-container .main-content .main-intro .join-us button {
+  text-align: center;
+}
