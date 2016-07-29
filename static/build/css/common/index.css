@@ -60,7 +60,7 @@
 .main-container .main-content .main-intro .join-us {
   background-color: #d5d8dc;
   margin-top: 1em;
-  padding-top: 1em;
+  padding: 1em 0;
 }
 .main-container .main-content .main-intro .join-us h1 {
   text-align: center;
@@ -68,6 +68,11 @@
 .main-container .main-content .main-intro .join-us .content {
   text-align: center;
 }
-.main-container .main-content .main-intro .join-us button {
+.main-container .main-content .main-intro .join-us .button {
   text-align: center;
+}
+.main-container .main-content .main-intro .join-us .button button {
+  width: 10em;
+  margin-top: 1em;
+  color: #fff;
 }
