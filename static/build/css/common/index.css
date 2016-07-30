@@ -37,9 +37,20 @@
   color: #49BFF6 !important;
   justify-content: center;
 }
+.main-container .main-content .main-pic {
+  background-color: #49BFF6;
+  display: flex;
+  padding: 2em;
+  height: 25em;
+}
+.main-container .main-content .main-pic .title {
+  flex: 2;
+}
+.main-container .main-content .main-pic .pic {
+  flex: 1;
+}
 .main-container .main-content .main-pic img {
-  width: 100%;
-  height: 40em;
+  height: 15em;
 }
 .main-container .main-content .main-intro {
   margin-top: 2em;

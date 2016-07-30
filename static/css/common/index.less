@@ -41,9 +41,18 @@
     }
     .main-content{
         .main-pic{
+            background-color: @default_color;
+            display: flex;
+            padding: 2em;
+            height: 25em;
+            .title{
+                flex: 2;
+            }
+            .pic{
+                flex: 1;
+            }
             img{
-                width: 100%;
-                height: 40em;
+                height: 15em;
             }
         }
         .main-intro{
