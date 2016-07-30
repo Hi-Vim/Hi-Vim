@@ -15,6 +15,15 @@
         background: #fff;
         color: @default_color; 
         display: flex;
+        .ui.menu .item:before{
+            width: 0;
+        }
+        .nav-menu{
+            width: 100%;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+        }
         .logo{
             flex: 2;
             text-align: center;
@@ -23,7 +32,11 @@
         .nav-item{
             flex: 1;
             text-align: center;
-            .cursor;
+            font-size: 1.3em;
+            color: @default_color!important;
+            justify-content: center;
+        }
+        .nav-item:hover{
         }
     }
     .main-content{
@@ -64,7 +77,7 @@
             .join-us{
                  background-color: #d5d8dc;
                  margin-top: 1em;
-                 padding: 1em 0;
+                 padding: 2em 0;
                  h1{
                       text-align: center;
                  }
@@ -81,6 +94,27 @@
                       }
                  }
             }
+        }
+    }
+}
+
+.main-footer{
+    height: 3em;
+    margin-top: 10em;
+    border-top: solid 0.1em #ddd;
+    display: flex;
+    padding: 2em 1em;
+    color: #999;
+    align-items: center;
+    .copyright{
+        flex: 1;
+    } 
+    .about{
+        flex: 1;
+        justify-content: flex-end;
+        display: flex;
+        .conn{
+            margin-left: 2em;
         }
     }
 }
