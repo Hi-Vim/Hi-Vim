@@ -44,10 +44,26 @@
   height: 25em;
 }
 .main-container .main-content .main-pic .title {
-  flex: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0.5em;
+  padding-left: 15em;
+  color: #fff;
+}
+.main-container .main-content .main-pic .title .t1 {
+  font-size: 5em;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+.main-container .main-content .main-pic .title .t2 {
+  margin-bottom: 30px;
 }
 .main-container .main-content .main-pic .pic {
   flex: 1;
+  display: flex;
+  align-items: center;
 }
 .main-container .main-content .main-pic img {
   height: 15em;
@@ -90,13 +106,19 @@
 .main-container .main-content .main-intro .join-us .content {
   text-align: center;
 }
-.main-container .main-content .main-intro .join-us .button {
+.main-container .main-content .main-intro .join-us .t-button {
   text-align: center;
 }
-.main-container .main-content .main-intro .join-us .button button {
+.main-container .main-content .main-intro .join-us .t-button button {
   width: 10em;
   margin-top: 1em;
   color: #fff;
+}
+.main-container .main-content .main-intro .join-us .t-button .join-button {
+  background-color: #49BFF6;
+}
+.main-container .main-content .main-intro .join-us .t-button .join-button:hover {
+  background-color: #1678c2;
 }
 .main-footer {
   height: 3em;

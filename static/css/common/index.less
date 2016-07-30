@@ -46,10 +46,26 @@
             padding: 2em;
             height: 25em;
             .title{
-                flex: 2;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-bottom: 0.5em;
+                padding-left: 15em;
+                color: #fff;
+                .t1{
+                    font-size: 5em;
+                    line-height: 1;
+                    margin-bottom: 30px;
+                }
+                .t2{
+                    margin-bottom: 30px;
+                }
             }
             .pic{
                 flex: 1;
+                display: flex;
+                align-items: center;
             }
             img{
                 height: 15em;
@@ -93,13 +109,19 @@
                  .content{
                      text-align: center;
                  }
-                 .button{
+                 .t-button{
                       text-align: center;
                       button{
                           width: 10em;
                           //background-color: @default_color;
                           margin-top: 1em;
                           color: #fff;
+                      }
+                      .join-button{
+                          background-color: @default_color;
+                      }
+                      .join-button:hover{
+                          background-color: #1678c2;
                       }
                  }
             }
