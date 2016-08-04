@@ -1,7 +1,7 @@
 function init_tutorial() {
   $('.screen_view').each(function() {
     var G = VIM_GENERIC;
-    
+
     var context = $(this);
     var doc = create_VIM_DOCUMENT(context);
 
@@ -69,7 +69,7 @@ function init_tutorial() {
                                    tutorial.createSection, tutorial.registerSection, tutorial.showCommandOneByOne, doc);
     tutorial.startTutorial();
 
-    $('.toggle_siblings').live('click', function() {
+    $('.toggle_siblings').on('click', function() {
       $(this).siblings(':not(.headline)').toggle();
       $(this).closest('.section_menu').toggleClass('shrinkMenu');
     });

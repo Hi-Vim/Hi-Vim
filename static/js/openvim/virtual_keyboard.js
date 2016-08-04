@@ -61,7 +61,7 @@ function create_VIM_VIRTUAL_KEYBOARD() {
 
   function createKeyboard(rows) {
     var $keyboard = $('<div />', { 'class': 'keyboard' });
-    
+
     G.for_each(rows, function(row) {
       var $row = createRow(row);
       $keyboard.append($row);
@@ -74,21 +74,21 @@ function create_VIM_VIRTUAL_KEYBOARD() {
   }
 
   function bindToggleKeyboardSize($keyboard) {
-    $('.toggle_keyboard_size').live('click', function() {
+    $('.toggle_keyboard_size').on('click', function() {
       $(this).toggleClass('pressed_down');
       $keyboard.toggleClass('small_keyboard');
     });
   }
 
   function bindToggleScreenBrightness($keyboard) {
-    $('.toggle_screen_brightness').live('click', function() {
+    $('.toggle_screen_brightness').on('click', function() {
       $(this).toggleClass('pressed_down');
       $('.editor').toggleClass('darker');
     });
   }
 
   function bindToggle3d($keyboard) {
-    $('.toggle_3d_keyboard').live('click', function() {
+    $('.toggle_3d_keyboard').on('click', function() {
       $(this).toggleClass('pressed_down');
       $('.screen_view').toggleClass('view_3d');
     });

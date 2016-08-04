@@ -15,7 +15,7 @@ function create_VIM_EVENTLISTENER(interpret, environment, messager, isActiveCont
   }
 
   function bindMouse() {
-    environment.executor.chars().live('click', function() {
+    environment.executor.chars().on('click', function() {
       if(!isActiveContext()) return;
       //FIXME: check whether is allowed (for example, if in the middle of command, then not?)
       environment.executor.changeCursorTo($(this));
@@ -75,10 +75,10 @@ function create_VIM_EVENTLISTENER(interpret, environment, messager, isActiveCont
   function stopImmediatePropagation(event) {
     event.stopImmediatePropagation();
   }
-  
+
   $(function() {
     bindBasicCommandModeKeys();
     bindSpecial();
     bindMouse();
   });
-} 
+}

@@ -11,7 +11,7 @@ function createTutorial(context, interpreter, messager, doc) {
       'postFun': postFun
     }
   }
-  
+
   function registerSection(section) { tutorial_sections.push(section); }
 
   function sendMessageAsync(message) { setTimeout(function() { messager.sendMessage(message); }, 0); }
@@ -24,7 +24,7 @@ function createTutorial(context, interpreter, messager, doc) {
 
     var commandObj = commands[0];
     commands = commands.slice(1);
-    
+
     var command = commandObj.code !== undefined ? commandObj.code : commandObj;
     var commandPostFun = commandObj.postFun !== undefined ? commandObj.postFun : G.nothing;
 
@@ -180,7 +180,7 @@ function runSections(context, interpreter, messager, sections, doc) {
   }
 
   function hideKeyboard() { return; $('.keyboard_wrapper').hide(); }
-  
+
   function nextSection() {
     emphasized = false;
     abortCurrentSection = false;
@@ -196,7 +196,7 @@ function runSections(context, interpreter, messager, sections, doc) {
     });
 
     currentSectionIndex = currentSectionIndex !== undefined ? currentSectionIndex + 1 : 0;
-    
+
     if(currentSectionIndex >= sections.length) return;
     showCurrentSectionInMenu();
 
@@ -210,7 +210,7 @@ function runSections(context, interpreter, messager, sections, doc) {
   }
 
   function bindShowSection() {
-    $('.section_menu_item').live('click', function() {
+    $('.section_menu_item').on('click', function() {
       var number = $(this).attr('number');
       currentSectionIndex = number - 1; // XXX: a little bit of a hack
       abortCurrentSection = true;
@@ -223,7 +223,7 @@ function runSections(context, interpreter, messager, sections, doc) {
     $('.section_menu_item[number=' + currentSectionIndex + ']').addClass('selected');
   }
 
-  $('.section_menu_item').die();
+  $('.section_menu_item').off();
   $(bindShowSection);
 
   nextSection();
