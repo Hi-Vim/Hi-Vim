@@ -75,25 +75,25 @@ function register_VIM_TUTORIAL_SECTIONS(interpreter, messager, createSection, re
       interpreter.environment.setMode(mode);
     }
 
-	var introduction_section = createSection("介绍",
+	var introduction_section = createSection(I18n.getValue("Introduction"),
         defaultPre,
-		[
-            "你好",
-			"我是一份交互式的VIM指南",
-			"PS:按任意键可以快进。",
-			"如果你想直接练习VIM，可以点击|练习|页面。",
-			"现在我将介绍一些VIM的基本操作。",
-		], defaultPost);
+		new Array(
+			I18n.getValue("Hello"),
+			I18n.getValue("I am an interactive |Vim| tutorial."),
+			I18n.getValue("I'll teach you what Vim is about without hassle. If you are in a hurry, press any key to fast forward."),
+			I18n.getValue("To practice what you've learned, try out the |practice| page. It has a context sensitive reference for commands."),
+			I18n.getValue("Now, let me introduce you to basics of Vim.")
+		), defaultPost);
 
 
-    var two_modes_section = createSection("插入模式和普通模式",
+    var two_modes_section = createSection(I18n.getValue("Two modes, insert and normal"),
         defaultPre,
 	new Array(
-		"VIM有很多种编辑模式，这里先介绍两种，一个是插入|Insert|模式，插入模式下就和普通编辑器编辑时一样。",
-		"另一个是普通|Normal|模式，可以提供一些特殊的操作。",
-		"在任何时候你都可以在编辑器的状态栏里看到当前的编辑模式。",
-		"普通模式下按|i|键进入编辑模式，编辑模式下按|ESC|进入普通模式。",
-		"来，让我们试一下，切换到插入模式。"
+		I18n.getValue("Vim has two basic modes. One is |insert| mode, in which you write text as if in normal text editor."),
+		I18n.getValue("Another is |normal| mode which provides you efficient ways to navigate and manipulate text."),
+		I18n.getValue("At any time, you can see which mode you are in on the status bar which is located at the top of the editor."),
+		I18n.getValue("To change between modes, use |Esc| for normal mode and |i| for insert mode"),
+		I18n.getValue("Let's try it out! First, change to insert mode.")
 	),
     function() {
         interpreter.environment.setCommandMode();
@@ -490,3 +490,4 @@ function register_VIM_TUTORIAL_SECTIONS(interpreter, messager, createSection, re
     });
   }
 }
+

@@ -1,13 +1,12 @@
 jQuery(document).ready(function(){
 	I18n.init();
 	jQuery("[data-lang='en']").each(function(i,v){
-		//console.log($(v).text());
 		var value = $(v);
 		value.text(I18n.getValue(value.text()))
 	})
 })
 
-var　I18n = {
+I18n = {
 	init :function(){
 		jQuery.i18n.properties({
 		    name: 'lang',// 资源文件名称
