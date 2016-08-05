@@ -1,0 +1,98 @@
+{% extends "../common/layout.html" %}
+{% block content %}
+<!doctype html>
+
+<html xmlns='http://www.w3.org/1999/xhtml'> 
+<head>
+  <meta charset='utf-8' />
+  <link rel="stylesheet" type="text/css" href="/css/openvim/css.css?version={VERSION}" />
+  <link rel="stylesheet" type="text/css" href="/css/openvim/tutorial.css?version={VERSION}" />
+  <link rel="stylesheet" type="text/css" href="/css/openvim/virtual_keyboard.css?version={VERSION}" />
+    
+  <!--<title data-lang="en">Interactive Vim tutorial</title>-->
+  <title lang="zh-cn">VIM 互动教程</title>
+  <meta name="description" content="VIM,vim,教程,互动,互动式">
+
+  <!-- GENERAL (mostly) -->
+  <script type="text/Javascript" src="/js/openvim/engine/messager.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/view/blinking.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/engine/generic.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/engine/document.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/view/comparison.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/view/context_help.js?version={VERSION}"></script>
+
+
+
+  <!-- VIM specific parts -->
+  <script type="text/Javascript" src="/js/openvim/engine/executor.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/engine/interpreter.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/view/view.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/commands/searchcommands.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/commands/visualcommands.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/commands/visualblockcommands.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/commands/timescommands.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/commands/commands.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/view/event.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/tutorial/tutorial_engine.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/tutorial/sections.js?version={VERSION}"></script>
+  <script type="text/Javascript" src="/js/openvim/virtual_keyboard.js?version={VERSION}"></script>
+
+  <script type="text/Javascript" src="/js/openvim/tutorial/init_tutorial.js?version={VERSION}"></script>
+
+  <!-- 国际化部分 -->
+  <script type="text/Javascript" src="/js/openvim/jquery.i18n.properties.min.js"></script>
+  <script type="text/Javascript" src="/js/openvim/i18n.js"></script>
+
+  <!--
+  <script type="text/Javascript" src="js/jquery.js"></script>
+  -->
+  <script type="text/javascript" src="/js/openvim/jsapi"></script>
+  <!--
+  <script type="text/javascript" src="/js/openvim/jquery.min.js"></script>
+  -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+        init_tutorial();
+    })
+  </script>
+</head>
+
+<body>
+  <div class="screen_view">
+    <div class="content">
+        <h3 class="title"></h3>
+        <h3 class="info"></h3>
+
+        <div class="statusbar">
+            <div class="statustext"></div>
+            <div class="cursorlocation"></div>
+            <div style="clear: both;"></div>
+        </div>
+
+        <div class="text editor"></div>
+ 
+        <div class="searchbar">
+          <span class="searchPrefix">/</span>
+          <span class="searchText"></span>
+          <span class="searchHelp">&lt;Enter to find&gt;</span>
+        </div>
+
+        <div style="clear: both;"></div>
+    </div>
+
+    <div style="clear: both;"></div>
+    <div class="keyboard_wrapper">
+        <p class="keyboard_description">Virtual keyboard (shows keys you need to press on your physical keyboard; not clickable)</p>
+    </div>
+  </div>
+
+  <div class="section_menu">
+	  <div class="headline" >
+		  <span data-lang="en">Sections</span>
+		  <div class="toggle_siblings" data-lang="en">Toggle</div>
+</div>
+        <div class="section_menu_append_target" style="clear: both;"></div>
+  </div>
+</body>
+</html>
+{% endblock %}
