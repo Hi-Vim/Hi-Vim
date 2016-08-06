@@ -11,7 +11,6 @@
 }
 
 .screen_view {
-    margin-left: 100px;
 }
 
 .screen_view.view_3d .keyboard_wrapper {
@@ -21,22 +20,19 @@
 }
 
 .keyboard_wrapper {
-    margin-left: 78px;
-    width: 730px;
+    margin-top: 20px;
 }
 
 .keyboard {
     border-top: 2px solid #555;
     border-radius: 0.5em;
     padding: 10px;
-    width: 725px;
     box-shadow: 3px 3px 3px black;
     margin-bottom: 10px;
 }
 
 .keyboardRow {
-    display: inline-block;
-    width: 730px;
+    display: flex;
 }
 
 .hiddenButton {
@@ -63,6 +59,8 @@
 }
 
 .keyButton {
+    flex: 1;
+    font-size: 17px;
     letter-spacing: 2px;
     text-align: center;
     border-radius: 0.3em;
@@ -70,7 +68,7 @@
     color: white;
     display: inline-block;
     min-width: 35px;
-    height: 25px;
+    height: 38px;
     padding: 10px 5px 3px 5px;
     box-shadow: 2px 2px 2px black;
 }

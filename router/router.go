@@ -13,8 +13,8 @@ func Init() *echo.Echo {
 
 	e.SetRenderer(r)
 	e.Static("/static", "static/build/")
-	e.Static("/js", "static/js/")
-	e.Static("/css", "static/css/")
+	e.Static("/js", "static/build/js/")
+	e.Static("/css", "static/build/css/")
 	e.Static("/img", "static/img/")
 
 	e.GET("/", controller.Index)
