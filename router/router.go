@@ -6,6 +6,7 @@ import (
 	"github.com/labstack/echo"
 )
 
+// Init 用于初始化
 func Init() *echo.Echo {
 	e := echo.New()
 	e.Debug()
