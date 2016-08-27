@@ -38,10 +38,16 @@ function create_VIM_VIRTUAL_KEYBOARD() {
   function createKeyButton(key) {
     //TODO: refactor common functionality
     if(key.configuration) {
-      return $('<div />', { 'text': key.label, 'class': ('keyButton ' + key.clazz),'style':key.style });
-    } else if(key === "hid")
-      return $('<div />', { 'text': '_', 'class': 'keyButton hiddenButton' });
-    else if(key.primary !== undefined) {
+        if(key.clazz == undefined){
+            key.clazz = "";
+        }
+        var $key = $('<div />', { 'text': key.label, 'class': ('keyButton ' + key.clazz),'style':key.style });
+        $key.data('keyboard', key.label);
+        return $key;
+    }else if(key === "hid"){
+      var $key = $('<div />', { 'text': '_', 'class': 'keyButton hiddenButton' });
+      return $key;
+    }else if(key.primary !== undefined) {
       var $key = $('<div />', { 'text': (key.primary + " " + key.secondary), 'class': 'keyButton' });
       $key.data('keyboard', key.primary);
       return $key;
