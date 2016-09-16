@@ -1,6 +1,9 @@
 var gulp = require('gulp'),
     less = require('gulp-less'),
-    minifyCSS = require('gulp-minify-css');
+    minifyCSS = require('gulp-minify-css'),
+    gulpUtil = require('gulp-util'),
+    uglify = require('gulp-uglify');
+
 
 gulp.task('less', function () {
     gulp.src('css/**/*.less')
@@ -15,6 +18,12 @@ gulp.task('less', function () {
 //        .pipe(gulp.dest('public/stylesheets/user/share/'))
 //});
 
+gulp.task("js", function(){
+    gulp.src("js/**/*.js")
+        .pipe(uglify().on("error",gulpUtil.log))
+    .pipe(gulp.dest("build/js/"));
+
+})
 
 gulp.task("w", function () {
    gulp.watch("css/**/*.less", ['less']);

@@ -1,16 +1,12 @@
 {% extends "../common/layout.html" %}
+{% block title %} Hi,Vim 互动教程 {% endblock %}
 {% block content %}
-<!doctype html>
 
-<html xmlns='http://www.w3.org/1999/xhtml'> 
-<head>
-  <meta charset='utf-8' />
   <link rel="stylesheet" type="text/css" href="/css/openvim/css.css?version={VERSION}" />
   <link rel="stylesheet" type="text/css" href="/css/openvim/tutorial.css?version={VERSION}" />
   <link rel="stylesheet" type="text/css" href="/css/openvim/virtual_keyboard.css?version={VERSION}" />
     
   <!--<title data-lang="en">Interactive Vim tutorial</title>-->
-  <title lang="zh-cn">VIM 互动教程</title>
   <meta name="description" content="VIM,vim,教程,互动,互动式">
 
   <!-- GENERAL (mostly) -->
@@ -55,9 +51,7 @@
         init_tutorial();
     })
   </script>
-</head>
 
-<body>
     <div class="openvim-main">
         <div class="screen_view">
             <div class="content">
@@ -99,6 +93,4 @@
   
 
   
-</body>
-</html>
 {% endblock %}

@@ -16,25 +16,38 @@ function create_VIM_VIRTUAL_KEYBOARD() {
     }
   }
 
-  var escRow = ["Esc", 'hid', 'hid', 'hid', 'hid', 'hid', 'hid',
-    configurationKey('3d', 'toggle_3d_keyboard'),
-    configurationKey('Screen brightness', 'toggle_screen_brightness'),
-    configurationKey('Keyboard size', 'toggle_keyboard_size') ];
-  var numberRow = ['hid', '1', '2',
+  var escRow = ["Esc", 'hid', 'hid', 'hid', 'hid', 'hid', 'hid','hid','hid','hid'];
+  var numberRow = ['`', '1', '2',
     two('3', '#'), two('4', '$'), two('5', '%'),
-    '4', '5', '6', '7', '8', '9', '0'];
-  var tabRow = ['tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', {key: 'Backspace', label: '<='}];
-  var capslockRow = ['caps', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', '*', 'Enter'];
-  var shiftRow = ['shift', two('>', '<'), 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.'];
-  var bottomRow = ['ctrl', 'alt','win', 'Space','hid'];
+    two('6',"^"), '7', '8', '9', '0','-','=',{label:'Del',configuration:true,style:'flex:2'}];
+  var tabRow = [{label:'tab',configuration:true,style:'flex:1.5'},
+      'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p','[',']',
+      {configuration:true,label:'\\',style:'flex:1.5'}];
+  var capslockRow = [
+      {configuration:true,label:'caps',style:'flex:1.7'},
+      'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',"'",
+      {configuration:true,label:'Enter',style:'flex:2'}];
+  var shiftRow = [
+      {configuration:true,label:'shift',style:'flex:2.5'},
+      'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.',two("?","/"),
+      {configuration:true,label:'shift',style:'flex:2.5'}];
+  var bottomRow = ['ctrl', 'win', 'alt',
+      {configuration:true,label:'space',style:'flex:7'},
+      'alt','win','menu','ctrl'];
 
   function createKeyButton(key) {
     //TODO: refactor common functionality
     if(key.configuration) {
-      return $('<div />', { 'text': key.label, 'class': ('keyButton ' + key.clazz) });
-    } else if(key === "hid")
-      return $('<div />', { 'text': '_', 'class': 'keyButton hiddenButton' });
-    else if(key.primary !== undefined) {
+        if(key.clazz == undefined){
+            key.clazz = "";
+        }
+        var $key = $('<div />', { 'text': key.label, 'class': ('keyButton ' + key.clazz),'style':key.style });
+        $key.data('keyboard', key.label);
+        return $key;
+    }else if(key === "hid"){
+      var $key = $('<div />', { 'text': '_', 'class': 'keyButton hiddenButton' });
+      return $key;
+    }else if(key.primary !== undefined) {
       var $key = $('<div />', { 'text': (key.primary + " " + key.secondary), 'class': 'keyButton' });
       $key.data('keyboard', key.primary);
       return $key;

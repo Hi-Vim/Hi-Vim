@@ -6,3 +6,5 @@ production/
 minify.sh
 hi-vim
 node_modules/
+doc/vimcdoc-1.9.0/
+server
