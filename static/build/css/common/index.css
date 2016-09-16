@@ -58,7 +58,11 @@
   margin-bottom: 30px;
 }
 .main-container .main-content .main-pic .title .t2 {
+  font-size: 1.5em;
   margin-bottom: 30px;
+}
+.main-container .main-content .main-pic .title .t3 {
+  font-size: 1.5em;
 }
 .main-container .main-content .main-pic .pic {
   flex: 1;
