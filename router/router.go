@@ -1,18 +1,17 @@
 package router
 
 import (
-	"github.com/Laily123/hi-vim/controller"
-	"github.com/echo-contrib/pongor"
+	"github.com/Laily123/Hi-Vim/controller"
+	"github.com/MarcusMann/pongor-echo"
 	"github.com/labstack/echo"
 )
 
 // Init 用于初始化
 func Init() *echo.Echo {
 	e := echo.New()
-	e.Debug()
-	r := pongor.GetRenderer()
+	r:= pongor.GetRenderer()
 
-	e.SetRenderer(r)
+	e.Renderer = r
 	e.Static("/static", "static/build/")
 	e.Static("/js", "static/build/js/")
 	e.Static("/css", "static/build/css/")

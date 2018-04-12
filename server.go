@@ -1,11 +1,10 @@
 package main
 
 import (
-	"github.com/Laily123/hi-vim/router"
-	"github.com/labstack/echo/engine/standard"
+	"github.com/Laily123/Hi-Vim/router"
 )
 
 func main() {
 	e := router.Init()
-	e.Run(standard.New(":4004"))
+	e.Start(":4004")
 }
