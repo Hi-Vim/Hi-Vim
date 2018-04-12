@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Laily123/Hi-Vim/router"
+	"github.com/Hi-Vim/Hi-Vim/router"
 )
 
 func main() {

@@ -1,7 +1,7 @@
 package router
 
 import (
-	"github.com/Laily123/Hi-Vim/controller"
+	"github.com/Hi-Vim/Hi-Vim/controller"
 	"github.com/MarcusMann/pongor-echo"
 	"github.com/labstack/echo"
 )
